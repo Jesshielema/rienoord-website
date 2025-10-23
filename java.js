@@ -19,6 +19,4 @@ document.addEventListener('DOMContentLoaded', function(){
       }
     });
   }
-
-  // Contact form - removed validation to let Netlify handle it fully
 });
