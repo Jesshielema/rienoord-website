@@ -1,0 +1,54 @@
+# Netlify TOML configuratie voor RI&E Noord
+
+[build]
+  publish = "."
+  command = "echo 'No build command needed for static site'"
+
+# Form submissions email notifications
+[[plugins]]
+  package = "@netlify/plugin-emails"
+
+# Email notification naar rienoord@gmail.com bij elke inzending
+[build.environment]
+  SITE_NAME = "RI&E Noord"
+
+# Netlify Forms configuratie met email notificaties
+# Ga naar Netlify Dashboard > Site Settings > Forms > Form notifications
+# om email notificaties in te stellen naar: rienoord@gmail.com
+
+# Headers voor beveiliging en SEO
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+
+# Cache optimalisatie
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Redirects voor SEO
+[[redirects]]
+  from = "/home"
+  to = "/index.html"
+  status = 301
+
+[[redirects]]
+  from = "/rie-noord"
+  to = "/index.html"
+  status = 301

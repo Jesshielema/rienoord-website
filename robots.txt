@@ -1,0 +1,9 @@
+# robots.txt voor RI&E Noord
+User-agent: *
+Allow: /
+
+# Sitemap locatie
+Sitemap: https://rienoord.nl/sitemap.xml
+
+# Crawl-delay voor bots
+Crawl-delay: 10

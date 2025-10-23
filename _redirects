@@ -1,0 +1,12 @@
+# Netlify Redirects voor RI&E Noord
+
+# Home redirects
+/home /index.html 301
+/home.html /index.html 301
+
+# Success page (in case of direct access)
+/success /bedankt.html 200
+/thank-you /bedankt.html 200
+
+# Catch-all 404 redirect to home
+/404.html /index.html 404
