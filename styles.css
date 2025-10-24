@@ -1364,40 +1364,108 @@ textarea::placeholder{
   .primary-nav a{
     display:block;
     padding:var(--spacing-md) var(--spacing-lg);
+    font-size:16px;
   }
   
   .primary-nav a::after{display:none}
   
   .nav-toggle{display:inline-flex}
   
+  /* Hero mobile */
+  .hero{
+    padding:var(--spacing-2xl) 0;
+  }
+  
+  .hero-grid{
+    grid-template-columns:1fr;
+    gap:var(--spacing-xl);
+  }
+  
+  .hero-copy h1{
+    font-size:2rem;
+  }
+  
+  .lead{
+    font-size:18px;
+  }
+  
+  /* Services cards */
   .cards{
     grid-template-columns:1fr;
+    gap:var(--spacing-md);
+  }
+  
+  .card{
+    padding:var(--spacing-lg);
+  }
+  
+  /* Benefits mobile */
+  .benefits{
+    padding:var(--spacing-2xl) 0;
   }
   
   .benefits-grid{
     grid-template-columns:1fr;
+    gap:var(--spacing-md);
   }
   
+  .benefit{
+    padding:var(--spacing-lg) var(--spacing-lg) var(--spacing-lg) calc(var(--spacing-lg) + 45px);
+  }
+  
+  /* Page header mobile */
+  .page-header{
+    padding:var(--spacing-2xl) 0;
+  }
+  
+  .page-header h1{
+    font-size:2rem;
+  }
+  
+  .page-header p{
+    font-size:1rem;
+  }
+  
+  /* Process section mobile */
+  .process-section{
+    padding:var(--spacing-2xl) 0;
+  }
+  
+  .process-section .process-list{
+    padding:var(--spacing-lg);
+  }
+  
+  /* Values grid */
   .values-grid{
     grid-template-columns:1fr;
+    gap:var(--spacing-md);
   }
   
+  /* Team grid */
   .team-grid{
     grid-template-columns:1fr;
   }
   
+  /* Footer */
   .footer-main{
     grid-template-columns:1fr;
     gap:var(--spacing-lg);
   }
   
-  .hero{
-    padding:var(--spacing-2xl) 0;
-  }
-  
+  /* Buttons */
   .button.large{
     padding:var(--spacing-md) var(--spacing-xl);
     font-size:var(--fs-base);
+  }
+  
+  /* CTA box */
+  .cta-box{
+    padding:var(--spacing-xl);
+  }
+  
+  /* FAQ items */
+  .faq-item{
+    padding:var(--spacing-lg);
   }
 }
 
@@ -1406,8 +1474,50 @@ textarea::placeholder{
     padding:0 var(--spacing-md);
   }
   
+  /* Hero extra small screens */
+  .hero-copy h1{
+    font-size:1.75rem;
+  }
+  
+  .lead{
+    font-size:16px;
+  }
+  
+  /* Page header */
+  .page-header h1{
+    font-size:1.75rem;
+  }
+  
+  /* Benefits */
+  .benefit{
+    padding:var(--spacing-md) var(--spacing-md) var(--spacing-md) calc(var(--spacing-md) + 40px);
+  }
+  
+  .benefit::before{
+    width:36px;
+    height:36px;
+    left:var(--spacing-md);
+    top:var(--spacing-md);
+  }
+  
+  /* Contact form */
   .contact-form{
     padding:var(--spacing-lg);
+  }
+  
+  /* Buttons */
+  .button.large{
+    padding:var(--spacing-sm) var(--spacing-lg);
+    font-size:0.9rem;
+  }
+  
+  /* CTA box */
+  .cta-box{
+    padding:var(--spacing-lg);
+  }
+  
+  .cta-box h3{
+    font-size:1.25rem;
   }
 }
 
