@@ -1339,18 +1339,23 @@ textarea::placeholder{
 
 .footer-nav h4{
   color:#fff;
-  margin-bottom:var(--spacing-sm);
   font-size:var(--fs-base);
   font-weight:600;
+  margin-bottom:var(--spacing-sm);
+  margin-top:0;
 }
 
 .footer-nav a{
   display:block;
-  margin-bottom:var(--spacing-xs);
   color:rgba(255,255,255,0.8);
   text-decoration:none;
   transition:all var(--transition-fast);
   font-size:15px;
+  margin-bottom:var(--spacing-xs);
+}
+
+.footer-nav a:last-child{
+  margin-bottom:0;
 }
 
 .footer-nav a:hover{
