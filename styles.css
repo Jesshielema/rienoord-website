@@ -1343,6 +1343,10 @@ textarea::placeholder{
     --spacing-3xl:2.5rem;
   }
   
+  body{
+    padding-top:80px; /* Kleinere navbar hoogte op mobiel */
+  }
+  
   .primary-nav{
     display:none;
     position:absolute;
@@ -1470,6 +1474,10 @@ textarea::placeholder{
 }
 
 @media (max-width:480px){
+  body{
+    padding-top:70px; /* Nog kleiner op zeer kleine schermen */
+  }
+  
   .container{
     padding:0 var(--spacing-md);
   }
