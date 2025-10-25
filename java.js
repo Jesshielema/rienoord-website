@@ -45,10 +45,19 @@ document.addEventListener('DOMContentLoaded', function(){
     });
   }
 
-  // Scroll-triggered animations for benefits
+  // Scroll-triggered animations for benefits (alleen op desktop)
   var benefits = document.querySelectorAll('.benefit');
+  var isMobile = window.innerWidth <= 768;
   
   function checkBenefitsVisible(){
+    // Skip animatie op mobile - toon direct
+    if(isMobile){
+      benefits.forEach(function(benefit){
+        benefit.classList.add('visible');
+      });
+      return;
+    }
+    
     benefits.forEach(function(benefit){
       var rect = benefit.getBoundingClientRect();
       var windowHeight = window.innerHeight || document.documentElement.clientHeight;
@@ -60,8 +69,10 @@ document.addEventListener('DOMContentLoaded', function(){
   }
   
   if(benefits.length > 0){
-    window.addEventListener('scroll', checkBenefitsVisible);
-    checkBenefitsVisible(); // Check on page load
+    if(!isMobile){
+      window.addEventListener('scroll', checkBenefitsVisible);
+    }
+    checkBenefitsVisible(); // Check on page load (toont direct op mobile)
   }
 
   // Hide/show navbar on scroll
