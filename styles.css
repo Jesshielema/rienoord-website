@@ -262,7 +262,7 @@ a:focus-visible{outline:2px solid var(--color-primary);outline-offset:2px;border
 /* Hero Section */
 .hero{
   padding:var(--spacing-3xl) 0;
-  background-image:url('images/achtergrond-hero.jpg?v=2');
+  background-image:url('images/achtergrond-hero.jpg?v=3');
   background-size:cover;
   background-position:center;
   position:relative;
@@ -618,7 +618,7 @@ body.fade-in{
   top:var(--spacing-xl);
   width:44px;
   height:44px;
-  background-image:url('images/cirkelvink.png?v=2');
+  background-image:url('images/cirkelvink.png?v=3');
   background-color: transparent;
   background-size:contain;
   background-repeat:no-repeat;
@@ -959,7 +959,7 @@ body.fade-in{
 /* Page header - colored background */
 .page-header{
   padding:var(--spacing-3xl) 0;
-  background-image:url('images/footer.png');
+  background-image:url('images/footer.png?v=3');
   background-size:cover;
   background-position:center;
   text-align:center;
@@ -1381,7 +1381,7 @@ textarea::placeholder{
 /* Footer */
 .site-footer{
   padding:var(--spacing-xl) 0 var(--spacing-lg) 0;
-  background-image:url('images/footer.png');
+  background-image:url('images/footer.png?v=3');
   background-size:cover;
   background-position:center;
   background-repeat:no-repeat;
