@@ -3,7 +3,4 @@ User-agent: *
 Allow: /
 
 # Sitemap locatie
-Sitemap: https://rienoord.nl/sitemap.xml
-
-# Crawl-delay voor bots
-Crawl-delay: 10
+Sitemap: https://rienoord.netlify.app/sitemap.xml
