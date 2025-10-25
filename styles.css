@@ -262,9 +262,12 @@ a:focus-visible{outline:2px solid var(--color-primary);outline-offset:2px;border
 /* Hero Section */
 .hero{
   padding:var(--spacing-3xl) 0;
-  background-image:url('images/achtergrond-hero.jpg?v=3');
+  background-image:
+    linear-gradient(135deg, rgba(26,107,179,0.85) 0%, rgba(58,47,108,0.75) 100%),
+    url('images/achtergrond-hero.jpg?v=3');
   background-size:cover;
   background-position:center;
+  background-repeat:no-repeat;
   position:relative;
   overflow:hidden;
 }
@@ -276,7 +279,7 @@ a:focus-visible{outline:2px solid var(--color-primary);outline-offset:2px;border
   left:0;
   right:0;
   bottom:0;
-  background:linear-gradient(135deg, #1a6bb3 0%, rgba(58,47,108,0.75) 100%);
+  pointer-events:none;
   z-index:1;
 }
 
@@ -959,9 +962,12 @@ body.fade-in{
 /* Page header - colored background */
 .page-header{
   padding:var(--spacing-3xl) 0;
-  background-image:url('images/footer.png?v=3');
+  background-image:
+    linear-gradient(135deg, rgba(26,107,179,0.85) 0%, rgba(58,47,108,0.75) 100%),
+    url('images/footer.png?v=3');
   background-size:cover;
   background-position:center;
+  background-repeat:no-repeat;
   text-align:center;
   position:relative;
   overflow:hidden;
@@ -974,7 +980,7 @@ body.fade-in{
   left:0;
   right:0;
   bottom:0;
-  background:linear-gradient(135deg, #1a6bb3 0%, rgba(58,47,108,0.75) 100%);
+  pointer-events:none;
   z-index:1;
 }
 
@@ -1381,7 +1387,9 @@ textarea::placeholder{
 /* Footer */
 .site-footer{
   padding:var(--spacing-xl) 0 var(--spacing-lg) 0;
-  background-image:url('images/footer.png?v=3');
+  background-image:
+    linear-gradient(135deg, rgba(18,83,141,0.95) 0%, rgba(13,61,104,0.95) 100%),
+    url('images/footer.png?v=3');
   background-size:cover;
   background-position:center;
   background-repeat:no-repeat;
@@ -1396,7 +1404,7 @@ textarea::placeholder{
   left:0;
   right:0;
   bottom:0;
-  background:linear-gradient(135deg, rgba(18,83,141,0.95) 0%, rgba(13,61,104,0.95) 100%);
+  pointer-events:none;
   z-index:1;
 }
 
