@@ -1598,6 +1598,8 @@ textarea::placeholder{
   
   .benefit{
     padding:var(--spacing-lg) var(--spacing-lg) var(--spacing-lg) calc(var(--spacing-lg) + 45px);
+    opacity:1 !important;
+    transform:translateX(0) !important;
   }
   
   /* Page header mobile */
@@ -1756,6 +1758,8 @@ textarea::placeholder{
   /* Benefits */
   .benefit{
     padding:var(--spacing-md) var(--spacing-md) var(--spacing-md) calc(var(--spacing-md) + 40px);
+    opacity:1 !important;
+    transform:translateX(0) !important;
   }
   
   .benefit::before{
