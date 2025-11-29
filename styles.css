@@ -99,8 +99,8 @@ h1,h2,h3,h4,h5,h6{
   margin-bottom:var(--spacing-lg);
 }
 
-h1{font-size:3rem;letter-spacing:-0.02em}
-h2{font-size:2.25rem;letter-spacing:-0.01em}
+h1{font-size:clamp(2.5rem, 5vw, 4rem);letter-spacing:-0.02em}
+h2{font-size:clamp(1.875rem, 4vw, 2.5rem);letter-spacing:-0.01em}
 h3{font-size:var(--fs-xl);font-weight:600}
 h4{font-size:var(--fs-lg);font-weight:600}
 
@@ -1017,7 +1017,7 @@ body.fade-in{
 .page-header h1{
   color:#ffffff;
   margin-bottom:var(--spacing-lg);
-  font-size:2.5rem;
+  font-size:clamp(2rem, 4vw, 3rem);
 }
 
 .page-header p{
@@ -1059,70 +1059,11 @@ body.fade-in{
   width:100%;
 }
 
-/* RI&E page: enhanced process cards (rie.html) */
-.page-intro{
-  padding:var(--spacing-3xl) 0 var(--spacing-xl);
-  background:linear-gradient(180deg, rgba(26,107,179,0.06), rgba(26,107,179,0));
-}
-.page-intro .page-title{
-  font-size:2.2rem;
-  margin-bottom:var(--spacing-sm);
-  color:var(--color-primary-dark);
-}
-.page-intro .lead{color:var(--color-text-light)}
-
-.section-title{
-  font-size:1.9rem;
-  color:var(--color-primary-dark);
-  margin-bottom:var(--spacing-lg);
-  text-align:center;
-}
-
-.process{
-  padding:var(--spacing-xl) 0 var(--spacing-2xl);
-}
-.process-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
-  gap:var(--spacing-lg);
-}
-.process-card{
-  background:#fff;
-  border-radius:var(--radius-lg);
-  padding:var(--spacing-lg);
-  box-shadow:var(--shadow-sm);
-  border:1px solid rgba(26,107,179,0.12);
-  transition:transform var(--transition-base), box-shadow var(--transition-base);
-}
-.process-card:hover{
-  transform:translateY(-4px);
-  box-shadow:var(--shadow-md);
-}
-.process-card h3{margin:var(--spacing-sm) 0 var(--spacing-xs);color:var(--color-primary)}
-.process-card p{color:var(--muted)}
-.process-card .step{
-  width:40px;height:40px;border-radius:50%;
-  background:var(--color-primary);
-  color:#fff;font-weight:700;
-  display:inline-flex;align-items:center;justify-content:center;
-  box-shadow:0 4px 10px rgba(26,107,179,0.3);
-}
-.bullets{margin:var(--spacing-sm) 0 0; padding-left:1.1rem; color:var(--color-text-light)}
-.bullets li{margin:0.25rem 0}
-
-.faq-teaser{padding:var(--spacing-md) 0 var(--spacing-2xl); color:var(--muted)}
-.faq-teaser a{color:var(--color-primary); text-decoration:underline}
-
-@media(max-width:768px){
-  .process{padding:var(--spacing-lg) 0}
-  .section-title{margin-bottom:var(--spacing-md)}
-}
-
 .process-infographic h2{
   text-align:center;
   margin-bottom:var(--spacing-3xl);
   color:var(--color-primary);
-  font-size:2.2rem;
+  font-size:clamp(1.75rem, 3vw, 2.5rem);
 }
 
 .infographic-steps{
