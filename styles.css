@@ -488,6 +488,89 @@ body.fade-in{
   box-shadow:0 6px 16px rgba(0,0,0,0.2);
 }
 
+/* USP Slider Section - Auto-scrolling zonder vinkjes */
+.usp-slider-section{
+  padding:var(--spacing-3xl) 0;
+  background:#ffffff;
+  border-top:1px solid rgba(18,83,141,0.1);
+  border-bottom:1px solid rgba(18,83,141,0.1);
+  overflow:hidden;
+}
+
+.usp-slider-section h2{
+  text-align:center;
+  margin-bottom:var(--spacing-2xl);
+  color:var(--color-primary);
+}
+
+.usp-slider-wrapper{
+  overflow:hidden;
+  position:relative;
+  width:100%;
+}
+
+.usp-slider-track{
+  display:flex;
+  gap:var(--spacing-lg);
+  animation:scroll-usp 50s linear infinite;
+  width:max-content;
+}
+
+.usp-slide{
+  min-width:280px;
+  padding:var(--spacing-lg);
+  background:#ffffff;
+  border-radius:var(--radius-md);
+  box-shadow:var(--shadow-sm);
+  border:2px solid rgba(18,83,141,0.08);
+  text-align:center;
+  transition:all var(--transition-base);
+}
+
+.usp-slide:hover{
+  transform:translateY(-4px);
+  box-shadow:var(--shadow-md);
+  border-color:var(--color-primary-light);
+}
+
+.usp-slide h3{
+  color:var(--color-primary);
+  font-size:1.1rem;
+  margin-bottom:var(--spacing-xs);
+  font-weight:600;
+}
+
+.usp-slide p{
+  color:var(--muted);
+  font-size:0.95rem;
+  margin:0;
+  line-height:1.5;
+}
+
+@keyframes scroll-usp{
+  0%{
+    transform:translateX(0);
+  }
+  100%{
+    transform:translateX(-50%);
+  }
+}
+
+/* Pause animation on hover */
+.usp-slider-track:hover{
+  animation-play-state:paused;
+}
+
+@media(max-width:768px){
+  .usp-slide{
+    min-width:240px;
+  }
+  
+  .usp-slider-track{
+    animation:scroll-usp 40s linear infinite;
+  }
+}
+
 /* Intro & Services */
 .intro{
   padding:var(--spacing-3xl) 0;
@@ -1031,26 +1114,91 @@ body.fade-in{
 }
 
 /* Process section - light colored background */
+/* Process Section - Moderne visuele stijl */
 .process-section{
   padding:var(--spacing-3xl) 0;
-  background:#f5f7fa;
-  border-top:1px solid var(--color-border);
-  border-bottom:1px solid var(--color-border);
+  background:linear-gradient(135deg, #f8f9ff 0%, #f0f4ff 100%);
+  border-top:1px solid rgba(18,83,141,0.1);
+  border-bottom:1px solid rgba(18,83,141,0.1);
 }
 
 .process-section h2{
   text-align:center;
-  margin-bottom:var(--spacing-2xl);
+  margin-bottom:var(--spacing-sm);
   color:var(--color-primary);
+  font-size:2rem;
+}
+
+.process-section p{
+  text-align:center;
+  color:var(--muted);
+  margin-bottom:var(--spacing-2xl);
+  max-width:700px;
+  margin-left:auto;
+  margin-right:auto;
 }
 
 .process-section .process-list{
-  max-width:800px;
+  max-width:1200px;
   margin:0 auto;
+  padding:0;
+  list-style:none;
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+  gap:var(--spacing-lg);
+}
+
+.process-section .process-list li{
   background:#ffffff;
-  padding:var(--spacing-2xl);
+  padding:var(--spacing-xl);
   border-radius:var(--radius-lg);
   box-shadow:var(--shadow-sm);
+  border:2px solid rgba(18,83,141,0.08);
+  transition:all var(--transition-base);
+  position:relative;
+  counter-increment:step-counter;
+}
+
+.process-section .process-list li::before{
+  content:counter(step-counter);
+  position:absolute;
+  top:-15px;
+  left:var(--spacing-lg);
+  width:40px;
+  height:40px;
+  background:linear-gradient(135deg, var(--color-primary) 0%, #0d3a6e 100%);
+  color:#ffffff;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:700;
+  font-size:1.1rem;
+  box-shadow:0 4px 12px rgba(18,83,141,0.3);
+}
+
+.process-section .process-list{
+  counter-reset:step-counter;
+}
+
+.process-section .process-list li:hover{
+  transform:translateY(-4px);
+  box-shadow:var(--shadow-md);
+  border-color:var(--color-primary-light);
+}
+
+.process-section .process-list li strong{
+  display:block;
+  color:var(--color-primary);
+  font-size:1.15rem;
+  margin-bottom:var(--spacing-xs);
+  margin-top:var(--spacing-sm);
+}
+
+.process-section .process-list li::after{
+  content:'';
+  display:block;
+  margin-top:var(--spacing-xs);
 }
 
 /* Process Infographic */
